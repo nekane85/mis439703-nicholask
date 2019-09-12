@@ -1,0 +1,8 @@
+UI Path Notes
+  Learn respnose status codes/418 I'm a teapot
+  class array docs.ruby-lang.org
+  Get, Post, Put, Delete, Patch
+first variable defined with ?, all following variable are started with &
+%20 is a coded spacebar, or do not use spaces
+  what is an http method
+  deploy rails application

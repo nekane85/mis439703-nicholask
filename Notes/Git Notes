@@ -1,0 +1,7 @@
+git status #checking nothing is staged
+git add .
+git status #checking staging is correct
+git commit -am "name it something"
+git push -u origin master [URL]
+username
+pasword
