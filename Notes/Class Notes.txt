@@ -5,4 +5,5 @@ UI Path Notes
 first variable defined with ?, all following variable are started with &
 %20 is a coded spacebar, or do not use spaces
   what is an http method
-  deploy rails application
+
+

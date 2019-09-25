@@ -1,7 +1,8 @@
+#Github Commit Steps in terminal
 git status #checking nothing is staged
 git add .
 git status #checking staging is correct
 git commit -am "name it something"
-git push -u origin master [URL]
-username
-pasword
+git push -u origin master https://github.com/nekane85/mis439703-nicholask.git
+username nekane85
+pasword R*A*****
