@@ -4,5 +4,6 @@ git add .
 git status #checking staging is correct
 git commit -am "name it something"
 git push -u origin master https://github.com/nekane85/mis439703-nicholask.git
+#may just be git push if given error, this worked for 2nd commit
 username nekane85
 pasword R*A*****
