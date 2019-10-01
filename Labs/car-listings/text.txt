@@ -1,0 +1,8 @@
+rails g scaffold car model:string year:string condition:string location_address:string
+location_city:string location_state:string location_zip:string price:float status:str
+ing sold_by:string
+rails g scaffold dealership name:string address:string city:string state:string zip:st
+ring owner:string
+rails g scaffold salesman first_name:string last_name:string email_address:string
+rails g scaffold prospect first_name:string last_name:string email_address:string addr
+ess:string city:string state:string zip:string mobile_phone_number:string
