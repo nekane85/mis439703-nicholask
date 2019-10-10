@@ -7,3 +7,12 @@ git push -u origin master https://github.com/nekane85/mis439703-nicholask.git
 #may just be git push if given error, this worked for 2nd commit
 username nekane85
 pasword R*A*****
+
+
+
+
+#Rails notes
+rails console = open rails console
+car = Car.all           this selects * from table car
+car = Car.count         this counts number of entries in table
+rails s -b 0.0.0.0      deploys current application live, might need bundle install first

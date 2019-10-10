@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20190926192246) do
   create_table "cars", force: :cascade do |t|
     t.string   "model"
     t.string   "year"
-    t.text     "description"
     t.string   "condition"
     t.string   "location_address"
     t.string   "location_city"
