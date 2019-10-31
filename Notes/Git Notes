@@ -22,3 +22,67 @@ car = Car.all           this selects * from table car
 car = Car.count         this counts number of entries in table
 Car.all.limit(1)        this pulls the list but limits the results to 1
 rails s -b 0.0.0.0      deploys current application live, might need bundle install first
+kill -INT $(cat tmp/pids/server.pid)  #kills running server application when CTRL + C doesnt work
+
+
+###Notes
+rails g scaffold Student student_first_name:string student_last_name:string student_email:string student_reason:string 
+rails g scaffold Tutor tutor_first_name:string tutor_last_name:string  tutor_email:string tutor_boss:string 
+rails g scaffold Admin admin_first_name:string admin_last_name:string admin_email:string 
+
+###admin_department:string 
+
+rake db:create db:migrate
+
+rake db:seed
+##time_in:string time_out:string
+##tutor_clockin:string tutor_clockout:string
+##tutor_PSID:string
+##tutor_clockin:string tutor_clockout:string
+##tutor_PSID:string
+##rails g scaffold Godpass tutor_username:string tutor_acess:int admin_email:string admin_acess:string
+##admin_access:string 
+
+# students
+100.times do |i|
+Student.create(student_first_name: Faker::Name.student_first_name,  student_last_name: Faker::Name.student_last_name, student_email: Faker::Internet.email, student_reason:"<herf:https://media1.giphy.com/media/JIX9t2j0ZTN9S/giphy.webp?cid=790b761135bd60fafe0bab7f46409f3cb2ec95fbea4b3f23&rid=giphy.webp>").save
+end
+#tutors
+10.times do |i|
+  Jobrec.create(tutor_first_name: Faker::Name.tutor_first_name,  tutor_last_name: Faker::Name.tutor_last_name, tutor_email: Faker::Internet.email, tutor_boss: Faker:Name.tutor_boss).save
+end
+#admin
+5.times do |i|
+  Jobrec.create(admin_first_name: Faker::Name.admin_first_name,  admin_last_name: Faker::Name.admin_last_name, admin_email: Faker::Internet.email).save
+end
+
+
+###seeds.rb file
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+# students
+100.times do |i|
+Student.create(student_first_name: Faker::Name.first_name,  student_last_name: Faker::Name.last_name, student_email: Faker::Internet.email, student_reason:"<herf:https://media1.giphy.com/media/JIX9t2j0ZTN9S/giphy.webp?cid=790b761135bd60fafe0bab7f46409f3cb2ec95fbea4b3f23&rid=giphy.webp>").save
+end
+#tutors
+10.times do |i|
+  Tutor.create(tutor_first_name: Faker::Name.first_name,  tutor_last_name: Faker::Name.last_name, tutor_email: Faker::Internet.email, tutor_boss: Faker::Name.first_name).save
+end
+#admin
+5.times do |i|
+ Admin.create(admin_first_name: Faker::Name.first_name,  admin_last_name: Faker::Name.last_name, admin_email: Faker::Internet.email).save
+end
+
+
+###Gemfile Faker and sqlite3 changes
+#faker
+gem 'faker'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.0.0'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3','~>1.3','< 1.4'
